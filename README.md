@@ -1,4 +1,4 @@
-# Random-10-Second-Break
+# Random-Micro-Rest-Tracker/Random-10-Second-Break
 Repository for Tkinter-based random 10-second break app inspired by Andrew Huberman's "Neuroplasticity Super Protocol" 
 
 Dr.Huberman claims that implementing random micro-rest periods can help one learn faster by leveraging neural repetitions.
