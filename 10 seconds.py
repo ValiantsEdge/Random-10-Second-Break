@@ -37,7 +37,7 @@ def changeText(whichButton, stopTime = None):
             totalTimeHourMin = "Your session lasted "+ str(timeDifferenceHours[0])+ " hours and ", str(timeDifferenceHours[1])+ " minutes \n" + breakText
             text.config(text=totalTimeHourMin)
     
-# Root window
+# Root window 
 root = Tk()
 root.title("Randomly Spaced 10 Seconds")
 root.minsize(300,300)
