@@ -7,10 +7,10 @@ breakCounter = 0
 startTime = datetime.datetime.now()
 
 def randomTime():
-    randomTimeInt = random.randint(90, 450)
+    randomTimeInt = random.randint(90, 240)
     # randomTimeInt = random.randint(1, 2)
-    # Wait for length = randomTimeInt (1.5-4.5 minutes)
-    time.sleep(randomTimeInt)
+    # Wait for length = randomTimeInt (1.5-4 minutes)
+    countdown(randomTimeInt)
     print("Slept for " + str(randomTimeInt) + " seconds")
     # Make label show break prompt text
     text.config(text="Time for a 10 second break", fg = "Red", font = ("None", 16, "bold"))
@@ -18,13 +18,19 @@ def randomTime():
     # Bring Tkinter window to front of screen upon breaktime
     bringToFront(root)
 
+def countdown(seconds):
+    while seconds > 0:
+        time.sleep(1)
+        seconds -= 1
+        print("Seconds remaining: " + str(seconds))            
+
 def changeText(whichButton, stopTime = None):
     global breakCounter
     defaultText(text)
     if whichButton == "Ack":
         text.config(text="Started 10 second break")
         switchAck("Break")
-        time.sleep(10)
+        countdown(10)
         breakCounter += 1
         text.config(text="10 second break over")
         ackButton.config(bg="SeaGreen1")
