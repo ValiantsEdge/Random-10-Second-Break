@@ -89,6 +89,7 @@ def startFunc():
     root.update()
     randomTime()
     startButton.config(bg="gray37")
+    root.update()
 
 startButton = Button(root, text="Start", 
                      command=startFunc,
@@ -107,6 +108,7 @@ def stopFunc():
     changeText("Stop",stopTime)
     startButton.config(state=NORMAL, bg="forest green")
     switchAck("Disable")
+    root.update()
 
 stopButton = Button(root, text="Stop",
                     command=stopFunc,
@@ -122,6 +124,7 @@ def ackFunc():
     print("ack was clicked")
     changeText("Ack")
     randomTime()
+    root.update()
 
 ackButton = Button(root, text="Acknowledge",
                    command=ackFunc,
